@@ -20,7 +20,7 @@ public class HumanPlayer implements Player {
         return point;
     }
     public int allPoints(){
-        return addPoint();
+        return point;
     }
     public String name(){
         return scanner.next();
