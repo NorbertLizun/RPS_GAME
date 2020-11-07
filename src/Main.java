@@ -11,8 +11,16 @@ public class Main {
         terminal.greeting(player);
         terminal.yourEnemy(pc);
         terminal.chooseGun();
-//        terminal.vs(player,pc);
-        rules.whoWin(player,pc);
+
+        for (int i = 0; i < 10; i++) {
+            rules.whoWin(player, pc);
+            terminal.vs(player, pc);
+            terminal.winner(rules.getWinner());
+        }
+        terminal.score(player,pc);
+
+
+
 
 
 

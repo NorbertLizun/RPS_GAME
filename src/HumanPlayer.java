@@ -3,11 +3,14 @@ import java.util.Scanner;
 public class HumanPlayer implements Player {
     private int point;
     private final Scanner scanner = new Scanner(System.in);
+    private int choice;
 
-
+    public int getChoice() {
+        return this.choice;
+    }
 
     public int choice() {
-        int choice = scanner.nextInt();
+        choice = scanner.nextInt();
         if (choice < 1 || choice > 3) {
             System.out.println("This weapon is not in your inventory, please try again ;)");
             choice();
@@ -15,6 +18,7 @@ public class HumanPlayer implements Player {
 
         return choice;
     }
+
     public int addPoint(){
         point++;
         return point;
@@ -22,7 +26,7 @@ public class HumanPlayer implements Player {
     public int allPoints(){
         return point;
     }
-    public String name(){
-        return scanner.next();
+    public String name(Terminal terminal){
+        return terminal.getPlayerName();
     }
 }

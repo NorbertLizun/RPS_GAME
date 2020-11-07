@@ -2,7 +2,7 @@ public interface Player {
     int choice();
     int addPoint();
     int allPoints();
-    String name();
+    String name(Terminal terminal);
 }
 
 
