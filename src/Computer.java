@@ -2,8 +2,12 @@ import java.util.Random;
 
 public class Computer implements Player {
     private int point;
-    private Random random = new Random();
+    private final Random random = new Random();
     private int choice;
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
 
     public int getChoice() {
         return this.choice;
@@ -21,7 +25,7 @@ public class Computer implements Player {
     public int allPoints(){
         return point;
     }
-    public String name(Terminal terminal) {
-       return terminal.getBotName();
-    }
+//    public String name(Terminal terminal) {
+//       return terminal.getBotName();
+//    }
 }

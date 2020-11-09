@@ -5,6 +5,10 @@ public class HumanPlayer implements Player {
     private final Scanner scanner = new Scanner(System.in);
     private int choice;
 
+    public void setPoint(int point) {
+        this.point = point;
+    }
+
     public int getChoice() {
         return this.choice;
     }
@@ -15,7 +19,6 @@ public class HumanPlayer implements Player {
             System.out.println("This weapon is not in your inventory, please try again ;)");
             choice();
         }
-
         return choice;
     }
 
@@ -26,7 +29,7 @@ public class HumanPlayer implements Player {
     public int allPoints(){
         return point;
     }
-    public String name(Terminal terminal){
-        return terminal.getPlayerName();
-    }
+//    public String name(Terminal terminal){
+//        return terminal.getPlayerName();
+//    }
 }
